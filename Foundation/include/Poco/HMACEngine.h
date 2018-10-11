@@ -91,6 +91,9 @@ public:
 	}
 
 protected:
+
+	HMACEngine() {}
+
 	void init(const char* passphrase, std::size_t length)
 	{
 		_ipad = new char[BLOCK_SIZE];
@@ -130,7 +133,6 @@ protected:
 	}
 
 private:
-	HMACEngine();
 	HMACEngine(const HMACEngine&);
 	HMACEngine& operator = (const HMACEngine&);
 
