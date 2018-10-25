@@ -40,15 +40,6 @@
     <Filter Include="Crypt\Header Files">
       <UniqueIdentifier>{cccb5212-d9e4-40d7-a3b8-57eb3a204cb1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SharedLibrary">
-      <UniqueIdentifier>{854462ed-0ce2-4ff7-b435-01bf33c6cabe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="SharedLibrary\Source Files">
-      <UniqueIdentifier>{df853dcb-dbe6-4ec2-8fae-3c167590b788}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="SharedLibrary\Header Files">
-      <UniqueIdentifier>{315cc9b5-dfb7-4dad-8f29-b722d947975d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="RegularExpression">
       <UniqueIdentifier>{81f2cb16-5b94-4276-b6b2-fb5bd763b72e}</UniqueIdentifier>
     </Filter>
@@ -186,6 +177,15 @@
     </Filter>
     <Filter Include="Dynamic\Source Files">
       <UniqueIdentifier>{1c28c978-c475-416f-80e4-db72accc4822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tasks\SharedLibrary">
+      <UniqueIdentifier>{854462ed-0ce2-4ff7-b435-01bf33c6cabe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tasks\SharedLibrary\Source Files">
+      <UniqueIdentifier>{df853dcb-dbe6-4ec2-8fae-3c167590b788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tasks\SharedLibrary\Header Files">
+      <UniqueIdentifier>{315cc9b5-dfb7-4dad-8f29-b722d947975d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -475,22 +475,22 @@
       <Filter>Crypt\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Manifest.cpp">
-      <Filter>SharedLibrary\Source Files</Filter>
+      <Filter>Tasks\SharedLibrary\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SharedLibrary.cpp">
-      <Filter>SharedLibrary\Source Files</Filter>
+      <Filter>Tasks\SharedLibrary\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SharedLibrary_HPUX.cpp">
-      <Filter>SharedLibrary\Source Files</Filter>
+      <Filter>Tasks\SharedLibrary\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SharedLibrary_UNIX.cpp">
-      <Filter>SharedLibrary\Source Files</Filter>
+      <Filter>Tasks\SharedLibrary\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SharedLibrary_WIN32.cpp">
-      <Filter>SharedLibrary\Source Files</Filter>
+      <Filter>Tasks\SharedLibrary\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\SharedLibrary_WIN32U.cpp">
-      <Filter>SharedLibrary\Source Files</Filter>
+      <Filter>Tasks\SharedLibrary\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\RegularExpression.cpp">
       <Filter>RegularExpression\Source Files</Filter>
@@ -1314,31 +1314,31 @@
       <Filter>Crypt\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\ClassLibrary.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\ClassLoader.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\Manifest.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\MetaObject.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\SharedLibrary.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\SharedLibrary_HPUX.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\SharedLibrary_UNIX.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\SharedLibrary_WIN32.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Poco\SharedLibrary_WIN32U.h">
-      <Filter>SharedLibrary\Header Files</Filter>
+      <Filter>Tasks\SharedLibrary\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\pcre.h">
       <Filter>RegularExpression\PCRE Header Files</Filter>
