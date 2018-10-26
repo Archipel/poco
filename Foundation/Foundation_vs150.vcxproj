@@ -206,6 +206,7 @@
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoFoundationmtd.lib</OutputFile>
+      <AdditionalDependencies>iphlpapi.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|Win32'">
