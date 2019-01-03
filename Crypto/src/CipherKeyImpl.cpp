@@ -46,7 +46,7 @@ CipherKeyImpl::CipherKeyImpl(const std::string& name,
 	_pDigest = EVP_get_digestbyname(digest.c_str());
 
 	if (!_pDigest)
-		throw Poco::NotFoundException("Digest " + name + " was not found");
+		throw Poco::NotFoundException("Digest " + digest + " was not found");
 
 	_key = ByteVec(keySize());
 	_iv = ByteVec(ivSize());
@@ -176,15 +176,35 @@ void CipherKeyImpl::generateKey(
 	}
 
 	// Now create the key and IV, using the MD5 digest algorithm.
-	int keySize = EVP_BytesToKey(
-		_pCipher,
-		_pDigest ? _pDigest : EVP_md5(),
-		(salt.empty() ? 0 : saltBytes),
-		reinterpret_cast<const unsigned char*>(password.data()),
-		static_cast<int>(password.size()),
-		iterationCount,
-		keyBytes,
-		ivBytes);
+	int keySize = -1;
+	if (iterationCount == 0) {
+		keySize = EVP_BytesToKey(
+			_pCipher,
+			_pDigest ? _pDigest : EVP_md5(),
+			(salt.empty() ? 0 : saltBytes),
+			reinterpret_cast<const unsigned char*>(password.data()),
+			static_cast<int>(password.size()),
+			iterationCount,
+			keyBytes,
+			ivBytes
+		);
+	}
+	else {
+		unsigned char tmpkeyiv[EVP_MAX_KEY_LENGTH + EVP_MAX_IV_LENGTH];
+		int iklen = EVP_CIPHER_key_length(_pCipher);
+		int ivlen = EVP_CIPHER_iv_length(_pCipher);
+		keySize = PKCS5_PBKDF2_HMAC(
+			reinterpret_cast<const char*>(password.data()),
+			static_cast<int>(password.size()),
+			saltBytes, 8,
+			iterationCount, _pDigest ? _pDigest : EVP_md5(), iklen + ivlen, tmpkeyiv
+		);
+		if (keySize == 1) {
+			keySize = iklen;
+		}
+		memcpy(keyBytes, tmpkeyiv, iklen);
+		memcpy(ivBytes, tmpkeyiv + iklen, ivlen);
+	}
 
 	// Copy the buffers to our member byte vectors.
 	_key.assign(keyBytes, keyBytes + keySize);
