@@ -205,7 +205,7 @@ int WebSocketImpl::receiveBytes(Poco::Buffer<char>& buffer, int)
 	int payloadLength = receiveHeader(mask, useMask);
 	if (payloadLength <= 0)
 		return payloadLength;
-	int oldSize = buffer.size();
+	size_t oldSize = buffer.size();
 	buffer.resize(oldSize + payloadLength);
 	return receivePayload(buffer.begin() + oldSize, payloadLength, mask, useMask);
 }
