@@ -15,6 +15,8 @@
 
 
 #include "Poco/Redis/RedisStream.h"
+
+#include <cassert>
 #include <iostream>
 
 
@@ -41,12 +43,16 @@ RedisStreamBuf::~RedisStreamBuf()
 
 int RedisStreamBuf::readFromDevice(char* buffer, std::streamsize len)
 {
+	assert(len <= INT_MAX);
+    #pragma warning(suppress: 4244)
 	return _redis.receiveBytes(buffer, len);
 }
 
 
 int RedisStreamBuf::writeToDevice(const char* buffer, std::streamsize length)
 {
+	assert(length <= INT_MAX);
+    #pragma warning(suppress: 4244)
 	return _redis.sendBytes(buffer, length);
 }
 

@@ -13,6 +13,9 @@
 
 
 #include "Poco/Net/WebSocketImpl.h"
+
+#include <cassert>
+
 #include "Poco/Net/NetException.h"
 #include "Poco/Net/WebSocket.h"
 #include "Poco/Net/HTTPSession.h"
@@ -231,6 +234,8 @@ int WebSocketImpl::receiveNBytes(void* buffer, int bytes)
 
 int WebSocketImpl::receiveSomeBytes(char* buffer, int bytes)
 {
+	assert(_buffer.size() - _bufferOffset <= INT_MAX && _buffer.size() - _bufferOffset >= INT_MIN);
+    #pragma warning(suppress: 4267)
 	int n = _buffer.size() - _bufferOffset;
 	if (n > 0)
 	{
@@ -375,6 +380,8 @@ Poco::Timespan WebSocketImpl::getReceiveTimeout()
 
 int WebSocketImpl::available()
 {
+	assert(_buffer.size() - _bufferOffset <= INT_MAX && _buffer.size() - _bufferOffset >= INT_MIN);
+    #pragma warning(suppress: 4267)
 	int n = _buffer.size() - _bufferOffset;
 	if (n > 0)
 		return n + _pStreamSocketImpl->available();

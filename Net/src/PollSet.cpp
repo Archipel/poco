@@ -287,6 +287,7 @@ public:
 		{
 			Poco::Timestamp start;
 #ifdef _WIN32
+            #pragma warning(suppress: 4267)
 			rc = WSAPoll(&_pollfds[0], _pollfds.size(), static_cast<INT>(timeout.totalMilliseconds()));
 #else
 			rc = ::poll(&_pollfds[0], _pollfds.size(), timeout.totalMilliseconds());
