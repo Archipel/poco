@@ -134,9 +134,9 @@ Symbol* NameSpace::lookup(const std::string& name, std::set<const NameSpace*>& a
 			pSymbol = lookup(itAlias->second, alreadyVisited);
 		else
 		{
-			for (NameSpaceVec::const_iterator it = _importedNameSpaces.begin(); !pSymbol && it != _importedNameSpaces.end(); ++it)
+			for (NameSpaceVec::const_iterator itns = _importedNameSpaces.begin(); !pSymbol && itns != _importedNameSpaces.end(); ++itns)
 			{
-				Symbol* pNS = lookup(*it, alreadyVisited);
+				Symbol* pNS = lookup(*itns, alreadyVisited);
 				if (pNS && pNS->kind() == Symbol::SYM_NAMESPACE)
 				{
 					pSymbol = static_cast<NameSpace*>(pNS)->lookup(name, alreadyVisited);
@@ -168,6 +168,12 @@ void NameSpace::typeDefs(SymbolTable& table) const
 }
 
 	
+void NameSpace::typeAliases(SymbolTable& table) const
+{
+	extract(Symbol::SYM_TYPEALIAS, table);
+}
+
+
 void NameSpace::enums(SymbolTable& table) const
 {
 	extract(Symbol::SYM_ENUM, table);
