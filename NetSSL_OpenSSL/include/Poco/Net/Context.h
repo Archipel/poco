@@ -156,6 +156,10 @@ public:
 			/// Specifies whether the builtin CA certificates from OpenSSL are used.
 			/// Defaults to false.
 
+		bool ocspStaplingVerification;
+			/// Specifies whether Client should verify OCSP Response
+			/// Defaults to false.
+
 		std::string cipherList;
 			/// Specifies the supported ciphers in OpenSSL notation.
 			/// Defaults to "ALL:!ADH:!LOW:!EXP:!MD5:@STRENGTH".
@@ -397,6 +401,10 @@ public:
 		/// preferences. When called, the SSL/TLS server will choose following its own
 		/// preferences.
 
+	bool ocspStaplingResponseVerificationEnabled() const;
+		/// Returns true if automatic OCSP response
+		/// reception and verification is enabled for client connections
+
 private:
 	void init(const Params& params);
 		/// Initializes the Context with the given parameters.
@@ -415,6 +423,7 @@ private:
 	VerificationMode _mode;
 	SSL_CTX* _pSSLContext;
 	bool _extendedCertificateVerification;
+	bool _ocspStaplingResponseVerification;
 };
 
 
@@ -453,6 +462,12 @@ inline SSL_CTX* Context::sslContext() const
 inline bool Context::extendedCertificateVerificationEnabled() const
 {
 	return _extendedCertificateVerification;
+}
+
+
+inline bool Context::ocspStaplingResponseVerificationEnabled() const
+{
+	return _ocspStaplingResponseVerification;
 }
 
 
