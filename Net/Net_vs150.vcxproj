@@ -141,22 +141,22 @@
     <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release_static_md|x64'" Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_md|x64'" Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release_static_mt|x64'" Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug_static_mt|x64'" Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='release_shared|x64'" Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='debug_shared|x64'" Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -243,6 +243,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies>ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -276,6 +277,7 @@
       <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies>ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -307,8 +309,8 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
-      <LanguageStandard>stdcpp17</LanguageStandard>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoNetmtd.lib</OutputFile>
@@ -334,6 +336,7 @@
       <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoNetmt.lib</OutputFile>
@@ -357,6 +360,7 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoNetmdd.lib</OutputFile>
@@ -383,6 +387,7 @@
       <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Lib>
       <AdditionalDependencies>ws2_32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -401,7 +406,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader/>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <CompileAs>Default</CompileAs>
@@ -434,9 +439,9 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader/>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat/>
+      <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -465,7 +470,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader/>
+      <PrecompiledHeader />
       <ProgramDataBaseFileName>..\lib64\PocoNetmtd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -491,9 +496,9 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader/>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat/>
+      <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -513,7 +518,7 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader/>
+      <PrecompiledHeader />
       <ProgramDataBaseFileName>..\lib64\PocoNetmdd.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -539,9 +544,9 @@
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
       <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <PrecompiledHeader/>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat/>
+      <DebugInformationFormat />
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -573,7 +578,7 @@
     <ClInclude Include="include\Poco\Net\HTTPHeaderStream.h" />
     <ClInclude Include="include\Poco\Net\HTTPIOStream.h" />
     <ClInclude Include="include\Poco\Net\HTTPMessage.h" />
-    <ClInclude Include="include\Poco\Net\HTTPNTLMCredentials.h"/>
+    <ClInclude Include="include\Poco\Net\HTTPNTLMCredentials.h" />
     <ClInclude Include="include\Poco\Net\HTTPRequest.h" />
     <ClInclude Include="include\Poco\Net\HTTPRequestHandler.h" />
     <ClInclude Include="include\Poco\Net\HTTPRequestHandlerFactory.h" />
@@ -609,12 +614,12 @@
     <ClInclude Include="include\Poco\Net\MulticastSocket.h" />
     <ClInclude Include="include\Poco\Net\MultipartReader.h" />
     <ClInclude Include="include\Poco\Net\MultipartWriter.h" />
-    <ClInclude Include="include\Poco\Net\MultiSocketPoller.h"/>
+    <ClInclude Include="include\Poco\Net\MultiSocketPoller.h" />
     <ClInclude Include="include\Poco\Net\NameValueCollection.h" />
     <ClInclude Include="include\Poco\Net\Net.h" />
     <ClInclude Include="include\Poco\Net\NetException.h" />
     <ClInclude Include="include\Poco\Net\NetworkInterface.h" />
-    <ClInclude Include="include\Poco\Net\NTLMCredentials.h"/>
+    <ClInclude Include="include\Poco\Net\NTLMCredentials.h" />
     <ClInclude Include="include\Poco\Net\NTPClient.h" />
     <ClInclude Include="include\Poco\Net\NTPEventArgs.h" />
     <ClInclude Include="include\Poco\Net\NTPPacket.h" />
@@ -636,7 +641,7 @@
     <ClInclude Include="include\Poco\Net\RemoteSyslogListener.h" />
     <ClInclude Include="include\Poco\Net\ServerSocket.h" />
     <ClInclude Include="include\Poco\Net\ServerSocketImpl.h" />
-    <ClInclude Include="include\Poco\Net\SingleSocketPoller.h"/>
+    <ClInclude Include="include\Poco\Net\SingleSocketPoller.h" />
     <ClInclude Include="include\Poco\Net\SMTPChannel.h" />
     <ClInclude Include="include\Poco\Net\SMTPClientSession.h" />
     <ClInclude Include="include\Poco\Net\Socket.h" />
@@ -650,7 +655,7 @@
     <ClInclude Include="include\Poco\Net\SocketNotifier.h" />
     <ClInclude Include="include\Poco\Net\SocketReactor.h" />
     <ClInclude Include="include\Poco\Net\SocketStream.h" />
-    <ClInclude Include="include\Poco\Net\SSPINTLMCredentials.h"/>
+    <ClInclude Include="include\Poco\Net\SSPINTLMCredentials.h" />
     <ClInclude Include="include\Poco\Net\StreamSocket.h" />
     <ClInclude Include="include\Poco\Net\StreamSocketImpl.h" />
     <ClInclude Include="include\Poco\Net\StringPartSource.h" />
@@ -659,11 +664,11 @@
     <ClInclude Include="include\Poco\Net\TCPServerConnectionFactory.h" />
     <ClInclude Include="include\Poco\Net\TCPServerDispatcher.h" />
     <ClInclude Include="include\Poco\Net\TCPServerParams.h" />
-    <ClInclude Include="include\Poco\Net\UDPClient.h"/>
-    <ClInclude Include="include\Poco\Net\UDPHandler.h"/>
-    <ClInclude Include="include\Poco\Net\UDPServer.h"/>
-    <ClInclude Include="include\Poco\Net\UDPServerParams.h"/>
-    <ClInclude Include="include\Poco\Net\UDPSocketReader.h"/>
+    <ClInclude Include="include\Poco\Net\UDPClient.h" />
+    <ClInclude Include="include\Poco\Net\UDPHandler.h" />
+    <ClInclude Include="include\Poco\Net\UDPServer.h" />
+    <ClInclude Include="include\Poco\Net\UDPServerParams.h" />
+    <ClInclude Include="include\Poco\Net\UDPSocketReader.h" />
     <ClInclude Include="include\Poco\Net\WebSocket.h" />
     <ClInclude Include="include\Poco\Net\WebSocketImpl.h" />
   </ItemGroup>
