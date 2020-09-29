@@ -21,6 +21,7 @@
 #include "Poco/Buffer.h"
 #endif
 #include <algorithm>
+#include <filesystem>
 
 
 #if defined(POCO_OS_FAMILY_UNIX)
@@ -52,6 +53,9 @@ Path::Path(const std::string& path)
 	assign(path);
 }
 
+#if __cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
+Path::Path(const std::filesystem::path& path): Path(path.string()) {}
+#endif
 
 Path::Path(const std::string& path, Style style)
 {

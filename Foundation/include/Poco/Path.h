@@ -22,6 +22,14 @@
 #include <vector>
 
 
+#if __cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
+namespace std {
+	namespace filesystem {
+		class path;
+	}
+}
+#endif
+
 namespace Poco {
 
 
@@ -64,6 +72,11 @@ public:
 
 	Path(const std::string& path);
 		/// Creates a path from a string.
+
+#if __cplusplus >= 201703L || (defined(_MSVC_LANG) && _MSVC_LANG >= 201703L)
+	Path(const std::filesystem::path& path);
+		/// Creates a Poco::Path from a std::filesystem::path.
+#endif
 
 	Path(const std::string& path, Style style);
 		/// Creates a path from a string.
