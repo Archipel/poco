@@ -144,3 +144,5 @@ cmake-build/
 *.bak
 stage/
 releases/
+
+*.vcxproj.FileListAbsolute.txt
