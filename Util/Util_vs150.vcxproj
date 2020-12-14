@@ -103,7 +103,7 @@
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalOptions>/Zc:__cplusplus</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus /Zc:strictStrings-</AdditionalOptions>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoUtilmtd.lib</OutputFile>
@@ -130,7 +130,7 @@
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalOptions>/Zc:__cplusplus</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus /Zc:strictStrings-</AdditionalOptions>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoUtilmt.lib</OutputFile>

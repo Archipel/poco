@@ -104,7 +104,7 @@
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalOptions>/Zc:__cplusplus</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus /Zc:strictStrings-</AdditionalOptions>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoNetmtd.lib</OutputFile>
@@ -131,7 +131,7 @@
       <CompileAs>Default</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalOptions>/Zc:__cplusplus</AdditionalOptions>
+      <AdditionalOptions>/Zc:__cplusplus /Zc:strictStrings-</AdditionalOptions>
     </ClCompile>
     <Lib>
       <OutputFile>..\lib\PocoNetmt.lib</OutputFile>
